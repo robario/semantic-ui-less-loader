@@ -1,0 +1,24 @@
+{
+  "name": "semantic-ui-less-loader",
+  "version": "0.1.0",
+  "description": "inherited from less-loader in order to use semantic-ui-less easily.",
+  "keywords": ["webpack", "webpack-loader", "less-loader", "semantic-ui"],
+  "homepage": "https://github.com/robario/semantic-ui-less-loader#readme",
+  "bugs": "https://github.com/robario/semantic-ui-less-loader/issues",
+  "license": "MIT",
+  "author": "Hironori Yoshida <webmaster@robario.com> (https://www.robario.com/)",
+  "repository": "robario/semantic-ui-less-loader",
+  "scripts": {
+    "test": "webpack-dev-server --config ./www/webpack.config.js --content-base ./www"
+  },
+  "dependencies": {
+    "less-loader": "*",
+    "loader-utils": "^0.2.14"
+  },
+  "devDependencies": {
+    "css-loader": "*",
+    "semantic-ui-less": "*",
+    "style-loader": "*",
+    "webpack-dev-server": "*"
+  }
+}
