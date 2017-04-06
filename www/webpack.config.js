@@ -16,16 +16,22 @@ const webpackConfig = {
         filename: 'bundle.js',
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /[.]less$/,
-                loader: `style-loader!css-loader!../index.js?sourceMap`,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: '../index.js',
+                        options: {
+                            siteFolder: path.join(__dirname, 'site'),
+                            themeConfigPath:  path.join(__dirname, 'theme.config'),
+                        },
+                    },
+                ],
             },
          ],
-    },
-    semanticUILessLoader: {
-        siteFolder: path.join(__dirname, 'site'),
-        themeConfigPath:  path.join(__dirname, 'theme.config'),
     },
 };
 
