@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "less-loader": "*",
-    "loader-utils": "^0.2.14"
+    "loader-utils": "^1.0.0"
   },
   "devDependencies": {
     "css-loader": "*",

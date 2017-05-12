@@ -9,15 +9,21 @@ const webpackConfig = {
     context: __dirname,
     entry: './src/semantic.less',
     module: {
-        loaders: [
+        rules: [
             {
                 test: /[.]less$/,
-                loader: 'style-loader!css-loader!semantic-ui-less-loader?sourceMap',
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'semantic-ui-less-loader',
+                        options: {
+                            siteFolder: path.join(__dirname, 'src/site'),
+                        },
+                    },
+                ],
             },
-         ],
-    },
-    semanticUILessLoader: {
-        siteFolder: path.join(__dirname, 'src/site'),
+        ],
     },
 };
 

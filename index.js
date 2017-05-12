@@ -14,7 +14,7 @@ module.exports = function (source) {
         this.cacheable();
     }
 
-    let config = loaderUtils.getLoaderConfig(this, 'semanticUILessLoader');
+    let config = loaderUtils.getOptions(this) || {};
     config.defaultFolder = config.defaultFolder || path.dirname(require.resolve('semantic-ui-less/package.json'));
     config = Object.assign({
         definitionsFolder: path.join(config.defaultFolder, 'definitions'),
